@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 
-const SideMenu = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface SideMenuProps {
+  isMenuOpen: boolean;
+  setIsMenuOpen: (open: boolean) => void;
+}
 
+const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <>
       <button
